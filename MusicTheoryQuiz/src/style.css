@@ -25,9 +25,12 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column; /* Allows stacking of sections */
   min-width: 320px;
   min-height: 100vh;
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+  background-color: #242424;
+  overflow: hidden; /* Disables manual scrolling */
 }
 
 h1 {
@@ -40,6 +43,27 @@ h1 {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+/* Main Menu Section */
+#main-menu {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #646cff;
+}
+
+/* Level Sections */
+.section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #242424;
+  border-bottom: 2px solid #646cff;
 }
 
 .logo {
@@ -63,6 +87,7 @@ h1 {
   color: #888;
 }
 
+/* Buttons */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -73,6 +98,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  color: white;
 }
 button:hover {
   border-color: #646cff;
@@ -92,5 +118,11 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+    color: #1a1a1a;
   }
+}
+
+/* Add spacing for sections to improve scrolling visibility */
+.section + .section {
+  margin-top: 1px; /* Ensures there's always a visible divider between sections */
 }
