@@ -1,2 +1,1 @@
-# RustyNotes
-notepad app in terminal
+Music Theory Quiz to help memorize formulas
